@@ -6,5 +6,9 @@
 <style>
 </style>
     <h1 class="bg-blue-400 text-xl text-center font-bold">Movies Title</h1>
-    <img src="{{ asset('images/river.jpg') }}" alt="" srcset="">
+    {# The wrong way: #}
+    {# <img src="{{ asset('images/river.jpg') }}" alt="" srcset=""> #}
+    
+    {# The right way: #}
+    {# <img src="{{ asset('build/images/river.46521fe5.jpg') }}" alt=""> #}
 {% endblock %}
