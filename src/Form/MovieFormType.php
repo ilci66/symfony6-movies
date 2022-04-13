@@ -21,28 +21,36 @@ class MovieFormType extends AbstractType
                     'class' => 'bg-transparent block border-b-2 w-full h-20 text-3xl outline-none',
                     'placeholder' => 'Enter title...'
                 ),
-                'label' => false
+                'label' => false,
+                'required' => false
             ])
             ->add('releaseYear', IntegerType::class, [
                 'attr' => array(
                     'class' => 'bg-transparent mt-10 block border-b-2 w-full h-20 text-3xl outline-none',
                     'placeholder' => 'Enter release year...'
                 ),
-                'label' => false
+                'label' => false,
+                'required' => false
             ])
             ->add('description', TextareaType::class, [
                 'attr' => array(
                     'class' => 'bg-transparent mt-10 block h-60 border-b-2 w-full h-20 text-3xl outline-none',
                     'placeholder' => 'Enter description...'
                 ),
-                'label' => false
+                'label' => false,
+                'required' => false
             ])
-            ->add('imagePath', FileType::class, [
-                'attr' => array(
-                    'class' => 'py-10',
-                ),
-                'label' => false
-            ])
+            // ->add('imagePath', FileType::class, [
+            //     'attr' => array(
+            //         'class' => 'py-10',
+            //     ),
+            //     'label' => false
+            // ])
+            ->add('imagePath', FileType::class, array(
+                'required' => false,
+                'mapped' => false,
+                'required' => false
+            ))
             // ->add('actors') // gonna uncomment it later when handling associations
         ;
     }
