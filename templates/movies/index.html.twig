@@ -13,21 +13,21 @@
         </div>
     </div>
 
-    {# {% if app.user %} #}
-        {# <div class="mx-auto w-4/5 my-8">
+    {% if app.user %} 
+        <div class="mx-auto w-4/5 my-8">
             <a 
                 href="/movies/create" 
                 class="uppercase border border-gray-500 text-lg py-4 px-6 rounded transition transition-all bg-gray-800 text-white hover:bg-white hover:text-gray-800">
                 Create New movie
             </a>
-        </div> #}
-    {# {% endif %} #}
-    <h2>Logged In As: {{app.user.email}}</h2>
-    <div class="mx-auto w-4/5 my-8">
+        </div>
+    {% endif %} 
+    {# <h2>Logged In As: {{app.user.email}}</h2> #}
+    {# <div class="mx-auto w-4/5 my-8">
         <a href="/movies/create" class="uppercase border border-gray-500 text-lg py-4 px-6 rounded bg-gray-800 text-white">
             Create New Movie
         </a>
-    </div>
+    </div> #}
 
     <div class="md:grid lg:grid-cols-3 gap-20 w-4/5 mx-auto py-15 ">
         <!-- Review Item -->
